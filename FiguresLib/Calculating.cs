@@ -4,25 +4,24 @@ namespace FiguresLib
 {
     public class Calculating
     {
+        double a, b, c;
         public double calculating(double r)
         {
-            double d = r + r, s;
-            s = Math.PI * (r*r);
-            return s;
+            return Math.PI * (r * r);
         }
-        public double calculating(double x1,double x2, double x3)
+        public double calculating(double x1, double x2, double x3)
         {
-            double p = 0, s = 0;
-            p = (x1 + x2 + x3) / 2;
-            s = Math.Sqrt(p * (p - x1) * (p - x2) * (p - x3));
-            return s;
+            double p = (x1 + x2 + x3) / 2;
+            return Math.Sqrt(p * (p - x1) * (p - x2) * (p - x3));
         }
 
-
-   
+        public string rectangular(double x1, double x2, double x3)
+        {
+            if ((x3 * x3) == (x1 * x1) + (x2 * x2) || (x2 * x2) == (x1 * x1) + (x3 * x3) || (x1 * x1) == (x2 * x2) + (x3 * x3))
+            {
+                return "Треугольник является прямоугольным";
+            }
+            else return "Треугольник не является прямоугольным";
+        }
     }
 }
-/*
-Формула площади круга: Площадь круга ,
-где r - радиус круга, d - диаметр
-*/

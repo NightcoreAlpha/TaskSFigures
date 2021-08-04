@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="shop.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FiguresLib\FiguresLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="shop.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

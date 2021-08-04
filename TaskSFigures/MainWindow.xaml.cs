@@ -43,13 +43,9 @@ namespace TaskSFigures
                 double a = Convert.ToDouble(a1.Text), b = Convert.ToDouble(a2.Text), c = Convert.ToDouble(a3.Text);
                 Calculating calc = new Calculating();
                 tb3.Text = calc.calculating(a, b, c).ToString("0.0000");
-                if ((c * c) == (a * a) + (b * b))
-                {
-                    tb4.Text = "Треугольник является прямоугольным";
-                } else tb4.Text = "Треугольник не является прямоугольным";
+                tb4.Text = calc.rectangular(a, b, c);
             }
-            catch (Exception exp) { MessageBox.Show("Что то пошло не так(2): "+exp.Message,"Ошибка"); }
-
-            }
+            catch (Exception exp) { MessageBox.Show("Что то пошло не так(2): " + exp.Message, "Ошибка"); }
+        }
     }
 }
